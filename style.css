@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(9, 9, 121) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+.dragAndDropContainer {
+  display: flex;
+  width: 65%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#left,
+#right {
+  width: 450px;
+  min-height: 400px;
+  border-radius: 10px;
+  border: 5px dashed white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.item {
+  width: 65%;
+  color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid white;
+  background: #00d4ff;
+  font-weight: bold;
+  cursor: grab;
+}
+
+.dragging{
+    background-color:limegreen;
+}
+
+#reset{
+    width:45%;
+    padding:1rem 2rem;
+    border:0.5px solid white;
+    border-radius: 10px;
+    background-color: rgba(2, 2, 150, 0.491);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+  .dragAndDropContainer {
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
